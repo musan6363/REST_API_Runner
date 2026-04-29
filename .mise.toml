@@ -1,0 +1,10 @@
+[tools]
+python = "3.12"
+
+[tasks.app]
+description = "Launch the app"
+run = "uv run streamlit run app/app.py"
+
+[tasks.server]
+description = "Launch mock server"
+run = "uv run uvicorn mock.server:app --reload --port 8888"
